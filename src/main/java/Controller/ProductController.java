@@ -13,11 +13,13 @@ public class ProductController {
 
     @GetMapping("/product")
     public List<Product> getAllProducts() {
+
         if (i == 0) {
             productList.add(new Product(1, "Mickey Mouse", 30));
             productList.add(new Product(2, "Donald Duck", 35));
             productList.add(new Product(3, "Peppa Pig", 15));
             i++;
+            return productList;
         }
         return productList;
     }
